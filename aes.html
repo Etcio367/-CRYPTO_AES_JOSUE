@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="aes.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.3.0/crypto-js.js"></script>
+    <script src="aes.js"></script>
+
+    <title>Practica AES</title>
+</head>
+<body>
+
+    <header>
+        <h1>Practica no.5: AES</h1>
+    </header>
+
+    <main>
+
+        <div class="Formulario">
+
+            <div class="TipoCifrado">
+                <label>
+                    <input type="radio" name="operacion" value="Cifrar">Cifrar
+                </label>
+                <label>
+                    <input type="radio" name="operacion" value="Descifrar">Descifrar
+                </label>
+            </div>
+    
+            <div class="PasosCifrado">
+                <label for="modoDecEnc" class="cifrado">Modo de cifrado:</label>
+                
+                <select name="modo" id="modoDecEnc" class="modos">
+                    <option value="ECB">ECB</option>
+                    <option value="CBC">CBC</option>
+                    <option value="CFB">CFB</option>
+                    <option value="OFB">OFB</option>
+                </select>
+            </div>
+
+            <div class="Botones">
+                <input type="file" id="BotonImg" class="BotonImg" accept="image/*">
+                <br><br>
+                <input type="button" id="Boton" class="Boton" onclick="cifrar()" value="Aceptar">
+                <input type="button" id="Boton2" class="Boton" onclick="descifrar()" value="Descifrar CFB">
+            </div>
+
+        </div>
+
+        <div class="Fotos">
+
+            <div class="ImagenEntrada">
+                <canvas id="Canvas"></canvas>
+            </div>
+
+            <div class="ImagenSalida">
+                <canvas id="Canvas2" width="300" height="100"></canvas>
+            </div>
+
+            <div id="color"></div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>by Erick Domínguez Galán</p>
+    </footer>
+
+    
+</body>
+</html>
